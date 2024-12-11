@@ -229,6 +229,7 @@ public class LeaderBoardHandler : MonoBehaviour
         }
         Application.OpenURL(twitterUrl);
         Debug.LogError("Twitter shared");
+        _twitterShareBox.SetActive(false);
     }
     #endregion
 }
