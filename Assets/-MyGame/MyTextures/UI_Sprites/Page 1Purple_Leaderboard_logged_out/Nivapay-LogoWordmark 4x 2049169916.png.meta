@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: d6fb33a366408ae4fa105a8775f647aa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5543969194267624639
+    second: Nivapay-LogoWordmark 4x 2049169916_0
+  - first:
+      213: 7624418250347483816
+    second: Nivapay-LogoWordmark 4x 2049169916_1
+  - first:
+      213: -211660852976700906
+    second: Nivapay-LogoWordmark 4x 2049169916_2
+  - first:
+      213: 7252231466534802501
+    second: Nivapay-LogoWordmark 4x 2049169916_3
+  - first:
+      213: 4467342422405317397
+    second: Nivapay-LogoWordmark 4x 2049169916_4
+  - first:
+      213: 6548334350893043444
+    second: Nivapay-LogoWordmark 4x 2049169916_5
+  - first:
+      213: -6430694960409127250
+    second: Nivapay-LogoWordmark 4x 2049169916_6
+  - first:
+      213: 1950387179530073466
+    second: Nivapay-LogoWordmark 4x 2049169916_7
+  - first:
+      213: -5270466435130117237
+    second: Nivapay-LogoWordmark 4x 2049169916_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 39
+        width: 92
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb4c706eb9220fc40800000000000000
+      internalID: 5543969194267624639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 42
+        width: 83
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a297f6b0006fc960800000000000000
+      internalID: 7624418250347483816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 113
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612b77d5397001df0800000000000000
+      internalID: -211660852976700906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 42
+        width: 71
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54497b7481a15a460800000000000000
+      internalID: 7252231466534802501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_4
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 42
+        width: 21
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5138081a3403ffd30800000000000000
+      internalID: 4467342422405317397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_5
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 42
+        width: 71
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fec777c56b50ea50800000000000000
+      internalID: 6548334350893043444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_6
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 41
+        width: 58
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea65be9310591c6a0800000000000000
+      internalID: -6430694960409127250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_7
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 41
+        width: 59
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75bd526eca211b10800000000000000
+      internalID: 1950387179530073466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivapay-LogoWordmark 4x 2049169916_8
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 22
+        width: 70
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83337d83ba8bd6b0800000000000000
+      internalID: -5270466435130117237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Nivapay-LogoWordmark 4x 2049169916_0: 5543969194267624639
+      Nivapay-LogoWordmark 4x 2049169916_1: 7624418250347483816
+      Nivapay-LogoWordmark 4x 2049169916_2: -211660852976700906
+      Nivapay-LogoWordmark 4x 2049169916_3: 7252231466534802501
+      Nivapay-LogoWordmark 4x 2049169916_4: 4467342422405317397
+      Nivapay-LogoWordmark 4x 2049169916_5: 6548334350893043444
+      Nivapay-LogoWordmark 4x 2049169916_6: -6430694960409127250
+      Nivapay-LogoWordmark 4x 2049169916_7: 1950387179530073466
+      Nivapay-LogoWordmark 4x 2049169916_8: -5270466435130117237
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

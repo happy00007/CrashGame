@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: 3c13cc684be9c5843af2f5d58f6ba2a8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4108985624966754327
+    second: Ruller2_0
+  - first:
+      213: 6592364386872420536
+    second: Ruller2_1
+  - first:
+      213: -1382731861716995391
+    second: Ruller2_2
+  - first:
+      213: 5243257191740423538
+    second: Ruller2_3
+  - first:
+      213: -7431661536884445195
+    second: Ruller2_4
+  - first:
+      213: -123206049204486503
+    second: Ruller2_5
+  - first:
+      213: -5000866157831021873
+    second: Ruller2_6
+  - first:
+      213: -5909969212185478978
+    second: Ruller2_7
+  - first:
+      213: 6979876281515947978
+    second: Ruller2_8
+  - first:
+      213: -4040307336014977998
+    second: Ruller2_9
+  - first:
+      213: 2284602993558878688
+    second: Ruller2_10
+  - first:
+      213: 229994100470712858
+    second: Ruller2_11
+  - first:
+      213: 5713952621779765667
+    second: Ruller2_12
+  - first:
+      213: -3364415175137064753
+    second: Ruller2_13
+  - first:
+      213: -3300431477512040260
+    second: Ruller2_14
+  - first:
+      213: 2772319326438020136
+    second: Ruller2_15
+  - first:
+      213: -582482805998486330
+    second: Ruller2_16
+  - first:
+      213: 8166917634901836896
+    second: Ruller2_17
+  - first:
+      213: 4602738425583485467
+    second: Ruller2_18
+  - first:
+      213: -5607484740456348212
+    second: Ruller2_19
+  - first:
+      213: -9111387907782404481
+    second: Ruller2_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ruller2_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 17
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ef8bac2853f9f6c0800000000000000
+      internalID: -4108985624966754327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 17
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b867756b78cc7b50800000000000000
+      internalID: 6592364386872420536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 17
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c27eb2a2bc8fcce0800000000000000
+      internalID: -1382731861716995391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_3
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 17
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d33bbc2aac3c840800000000000000
+      internalID: 5243257191740423538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_4
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 16
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ffa113f43f6dd890800000000000000
+      internalID: -7431661536884445195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 16
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ebcf240c84a4ef0800000000000000
+      internalID: -123206049204486503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_6
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 17
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca9535a9ba599ab0800000000000000
+      internalID: -5000866157831021873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_7
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 16
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8703a50529bfda0800000000000000
+      internalID: -5909969212185478978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_8
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 16
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7beef3f708dd060800000000000000
+      internalID: 6979876281515947978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_9
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 17
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2342c6562e1fde7c0800000000000000
+      internalID: -4040307336014977998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_10
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 17
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9fedb715a84bf10800000000000000
+      internalID: 2284602993558878688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_11
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 17
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a0ef27a6a113300800000000000000
+      internalID: 229994100470712858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_12
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 17
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a9489cb2a90c4f40800000000000000
+      internalID: 5713952621779765667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_13
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 17
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8850149323f41d0800000000000000
+      internalID: -3364415175137064753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_14
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 17
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb09061ce038232d0800000000000000
+      internalID: -3300431477512040260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_15
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 17
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824d9403db1497620800000000000000
+      internalID: 2772319326438020136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_16
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 17
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccffac59fa9ae7f0800000000000000
+      internalID: -582482805998486330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_17
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 17
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064823a9158b65170800000000000000
+      internalID: 8166917634901836896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_18
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 17
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12c1f2363630ef30800000000000000
+      internalID: 4602738425583485467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_19
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 17
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc50da996563e22b0800000000000000
+      internalID: -5607484740456348212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruller2_20
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 17
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7617d9d8f8dd8180800000000000000
+      internalID: -9111387907782404481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ruller2_0: -4108985624966754327
+      Ruller2_1: 6592364386872420536
+      Ruller2_10: 2284602993558878688
+      Ruller2_11: 229994100470712858
+      Ruller2_12: 5713952621779765667
+      Ruller2_13: -3364415175137064753
+      Ruller2_14: -3300431477512040260
+      Ruller2_15: 2772319326438020136
+      Ruller2_16: -582482805998486330
+      Ruller2_17: 8166917634901836896
+      Ruller2_18: 4602738425583485467
+      Ruller2_19: -5607484740456348212
+      Ruller2_2: -1382731861716995391
+      Ruller2_20: -9111387907782404481
+      Ruller2_3: 5243257191740423538
+      Ruller2_4: -7431661536884445195
+      Ruller2_5: -123206049204486503
+      Ruller2_6: -5000866157831021873
+      Ruller2_7: -5909969212185478978
+      Ruller2_8: 6979876281515947978
+      Ruller2_9: -4040307336014977998
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

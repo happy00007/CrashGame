@@ -1,0 +1,6 @@
+{
+    "name": "Custom Template",
+    "description": "A custom WebGL template for my project.",
+    "unityVersion": "2023.1",
+    "default": false
+}
