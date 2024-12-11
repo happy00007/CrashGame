@@ -42,12 +42,16 @@ public class GamePlayHandler : MonoBehaviour
     [SerializeField] bool _iWonGame;
 
     public Action startGameExecutionAction;
-    float _currentMultiplierPoint;
-    float _currentGameTime;
-    float _currentGameTimeToShow;
-    float _timeToStartCrashPoint;
-
-    float _finalCrashPoint;
+    [ShowOnly]
+    [SerializeField] float _currentMultiplierPoint;
+    [ShowOnly]
+    [SerializeField] float _currentGameTime;
+    [ShowOnly]
+    [SerializeField] float _currentGameTimeToShow;
+    [ShowOnly]
+    [SerializeField] float _timeToStartCrashPoint;
+    [ShowOnly]
+    [SerializeField] float _finalCrashPoint;
     bool _isGameCrashed;
     PhotonView _photonView;
 
@@ -196,6 +200,8 @@ public class GamePlayHandler : MonoBehaviour
         _currentMultiplierPoint = 1;
         _currentGameTime = 0;
         _currentGameTimeToShow = 0;
+        _finalCrashPoint = 0;
+
         _isGameCrashed = false;
         _rocketObj.transform.position = _rocketStartPos.transform.position;
         LocalSettings.SetPosAndRect(_rocketObj, _rocketStartPos.GetComponent<RectTransform>(), _rocketStartPos.transform.parent);

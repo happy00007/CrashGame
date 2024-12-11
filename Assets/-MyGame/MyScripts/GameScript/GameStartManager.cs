@@ -101,7 +101,8 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             _gameStartWaitTime = 0;
             _gameStartWaitTimeTxt.text = "Waiting";
         }
-        //_gameStartWaitTime = LocalSettings.GAME_DELAY_TIME_OVERRIDE;
+        if (LocalSettings.GAME_DELAY_TIME_OVERRIDE > 0)
+            _gameStartWaitTime = LocalSettings.GAME_DELAY_TIME_OVERRIDE;
         _remainingGameStartTime = _gameStartWaitTime;
 
 

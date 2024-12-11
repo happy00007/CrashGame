@@ -12,7 +12,7 @@ public static class LocalSettings
     public const string ROOM_STATE = "ROOMSTATE";
     public const float GAME_RESET_DELAY_TIME = 3f;
 
-    public const int GAME_DELAY_TIME_OVERRIDE = 35;
+    public const int GAME_DELAY_TIME_OVERRIDE = 7;
 
     public const float GRAPH_X_AXIS_LIMIT = 12f;
     public const float GRAPH_Y_AXIS_LIMIT = 3.8f;

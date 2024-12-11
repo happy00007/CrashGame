@@ -2,6 +2,9 @@ Crash Game - Unity Project
 Overview
 This crash game is built in Unity and allows users to engage in dynamic and thrilling gameplay. This README serves as a guide to help developers modify and extend the functionality of the game. Below, you will find detailed information about the project's structure, scripts, and how to make adjustments.
 
+Unity Version: 2023.2.8f1
+Language: C#
+
 Project Structure
 The project is organized into several key scripts that manage different aspects of the game:
 Core Scripts
@@ -44,7 +47,7 @@ How to Modify the Game
 * Modify room behaviors in RoomManager.cs and RoomStateManager.cs.
 3. UI Customization
 * Update UI elements and layout in UIManager.cs.
-* Use ScaleBuilder.cs to adjust UI scaling dynamically.
+* Use ScaleBuilder.cs to adjust X and Y axis scale of the game dynamically.
 4. Networking
 * Use ConnectionManager.cs to integrate with new networking solutions.
 * Modify room and player synchronization logic in RoomNPlayerState.cs.
@@ -57,7 +60,7 @@ How to Modify the Game
 
 Dependencies
 Ensure the following dependencies are installed for smooth functionality:
-* Unity Version: Specify the version used.
+* Unity Version: 2023.2.8f1.
 * DOTween: Used for animations and transitions.
 * Newtonsoft.Json: For JSON parsing.
 
