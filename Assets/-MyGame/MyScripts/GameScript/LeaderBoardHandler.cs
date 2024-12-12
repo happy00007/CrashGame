@@ -58,35 +58,35 @@ public class LeaderBoardHandler : MonoBehaviour
     #endregion
 
     #region Lederboard from server
-    public void GetLeaderboardUsingAPI()
-    {
-        //GetJson.instance.GetJsonFromServer(APIStrings.getLeaderBoardAPIURL, GetLeaderboardFromServer);
-    }
+    //public void GetLeaderboardUsingAPI()
+    //{
+    //    GetJson.instance.GetJsonFromServer(APIStrings.getLeaderBoardAPIURL, GetLeaderboardFromServer);
+    //}
 
-    void GetLeaderboardFromServer(string jsonResponse, bool isSuccess)
-    {
-        if (isSuccess)
-        {
-            List<LeaderBoardDetailRootCls> users = JsonConvert.DeserializeObject<List<LeaderBoardDetailRootCls>>(jsonResponse);
-            CreateUIOfLeaderboard(users);
-        }
-    }
+    //void GetLeaderboardFromServer(string jsonResponse, bool isSuccess)
+    //{
+    //    if (isSuccess)
+    //    {
+    //        List<LeaderBoardDetailRootCls> users = JsonConvert.DeserializeObject<List<LeaderBoardDetailRootCls>>(jsonResponse);
+    //        CreateUIOfLeaderboard(users);
+    //    }
+    //}
 
-    void CreateUIOfLeaderboard(List<LeaderBoardDetailRootCls> users)
-    {
-        int totalPlayers = 0;
-        leaderboardItems = GamePlayHandler.instance.DestroyAndClearList(leaderboardItems);
-        for (int i = 0; i < users.Count; i++)
-        {
-            GameObject item = Instantiate(leaderboardDetailPrefab);
-            leaderboardItems.Add(item);
-            LocalSettings.SetPosAndRect(item, leaderboardDetailPrefab.GetComponent<RectTransform>(), leaderboardDetailPrefab.transform.parent);
-            item.SetActive(true);
-            item.GetComponent<LeaderboardItemDetail>().FillFieldsLeaderBoard(users[i], i % 2 == 0 ? itemClr[0] : itemClr[1]);
-            totalPlayers++;
-        }
-        _totalPlayersInGameTxt.text = totalPlayers.ToString();
-    }
+    //void CreateUIOfLeaderboard(List<LeaderBoardDetailRootCls> users)
+    //{
+    //    int totalPlayers = 0;
+    //    leaderboardItems = GamePlayHandler.instance.DestroyAndClearList(leaderboardItems);
+    //    for (int i = 0; i < users.Count; i++)
+    //    {
+    //        GameObject item = Instantiate(leaderboardDetailPrefab);
+    //        leaderboardItems.Add(item);
+    //        LocalSettings.SetPosAndRect(item, leaderboardDetailPrefab.GetComponent<RectTransform>(), leaderboardDetailPrefab.transform.parent);
+    //        item.SetActive(true);
+    //        item.GetComponent<LeaderboardItemDetail>().FillFieldsLeaderBoard(users[i], i % 2 == 0 ? itemClr[0] : itemClr[1]);
+    //        totalPlayers++;
+    //    }
+    //    _totalPlayersInGameTxt.text = totalPlayers.ToString();
+    //}
 
     #endregion
 
@@ -94,7 +94,7 @@ public class LeaderBoardHandler : MonoBehaviour
     #region Local Leaderboard
     int _currentCounter;
 
-    public void CreateUIOfLeaderboardPlayerRecord(string userName, string winamount, string emailID)
+    public void CreateUIOfLeaderboardPlayerRecord(string userName, string winAmount, string emailID)
     {
         //sdfsdf
         GameObject item = Instantiate(leaderboardDetailPrefab);
@@ -104,7 +104,7 @@ public class LeaderBoardHandler : MonoBehaviour
         LeaderBoardDetailRootCls lid = new LeaderBoardDetailRootCls {
             rank = 0,
             username = userName,
-            wallet_balance = winamount,
+            wallet_balance = winAmount,
             email = emailID
         };
         item.GetComponent<LeaderboardItemDetail>().FillFieldsLeaderBoard(lid, _currentCounter % 2 == 0 ? itemClr[0] : itemClr[1]);
@@ -138,7 +138,7 @@ public class LeaderBoardHandler : MonoBehaviour
     public void SortLeaderboard()
     {
 
-        if (leaderboardItems.Count <= 1)
+        if (leaderboardItems.Count < 1)
             return;
 
         leaderboardItems = leaderboardItems
@@ -165,7 +165,23 @@ public class LeaderBoardHandler : MonoBehaviour
 
     void ShowTwitterShareBox()
     {
-        _winDescriptionTxt.text = $"Your rank is {_currentRank}. And you have won {_wonAmount} \nShare on X";
+        string msg = "";
+        switch (_currentRank)
+        {
+            case 1:
+                msg = $"Congratulations! 🎉 You're ranked #{_currentRank} and just bagged ${_wonAmount}!";
+                break;
+            case 2:
+                msg = $"Well done! 🥈 Rank: #{_currentRank}  | You've won ${_wonAmount}! Keep pushing for the top spot!";
+                break;
+            case 3:
+                msg = $"Solid play! You're in 3rd place with ${_wonAmount}. Keep it up!";
+                break;
+            default:
+                msg = $"Well done! 🥈 Rank: #{_currentRank}  | You've won ${_wonAmount}! Keep pushing for the top spot!";
+                break;
+        }
+        _winDescriptionTxt.text = msg;
         _twitterShareBox.SetActive(true);
 
     }

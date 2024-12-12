@@ -5,9 +5,13 @@ using UnityEngine;
 public class OrientationHandler : MonoBehaviour
 {
     public OrientationObjets[] orientationObjets;
+    [SerializeField] GameObject _rocketAnimatorForScale;
     bool _isLand;
     void Start()
     {
+        bool isLandscape = Screen.width > Screen.height;
+        _isLand = isLandscape;
+        SetOrientation(_isLand);
         StartCoroutine(SetRemainingTime());
     }
 
@@ -18,6 +22,7 @@ public class OrientationHandler : MonoBehaviour
             RectTransform posObj = isLandscape ? orientationObjets[i].landscapePos : orientationObjets[i].portraitPos;
             LocalSettings.SetPosAndRect(orientationObjets[i].originalObj, posObj, posObj.transform.parent);
         }
+        _rocketAnimatorForScale.transform.localScale = isLandscape ? Vector3.one * 50 : Vector3.one * 70;
     }
 
 

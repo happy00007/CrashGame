@@ -41,7 +41,7 @@ public class PlayerLogin : ES3Cloud
             LocalSettings.userName = GenerateRandomName();
             LocalSettings.walletID = UnityEngine.Random.Range(10000000, 100000000).ToString();
         }
-        string playerName = LocalSettings.emailID;
+        string playerName = LocalSettings.userName;
         string email = LocalSettings.emailID;
         string walletNumber = LocalSettings.walletID;
 
@@ -49,6 +49,8 @@ public class PlayerLogin : ES3Cloud
         AddPOSTField(EMAIL, email);
         AddPOSTField(WALLETNUMBER, walletNumber);
         GetJson.instance.PostDataAndGetResponseFromServer(APIStrings.getPlayerDetailAPIURL, formData, PlayerLoginDetailParseJson);
+
+        Debug.LogError("Username :   " + LocalSettings.userName + "      Email:   " + LocalSettings.emailID);
     }
 
 
@@ -79,6 +81,8 @@ public class PlayerLogin : ES3Cloud
             GameManager.isPlayerLogedIn = false;
         }
     }
+
+    #region Generate random name
     string GenerateRandomName()
     {
         // Define lists of first and last name parts
@@ -92,6 +96,10 @@ public class PlayerLogin : ES3Cloud
         // Combine to create a full name
         return firstName + " " + lastName;
     }
+    #endregion
+
+
+    #region Generate Random Email
     string GenerateRandomEmail()
     {
         // Define random elements
@@ -112,6 +120,7 @@ public class PlayerLogin : ES3Cloud
         // Combine to create email
         return username + "@" + domain;
     }
+    #endregion
 }
 
 public class UserDetailCls

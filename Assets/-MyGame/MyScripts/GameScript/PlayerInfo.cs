@@ -67,11 +67,13 @@ public class PlayerInfo : MonoBehaviourPunCallbacks
         Vector3 scale = rocketRectTransform.localScale;
         Quaternion rotation = rocketRectTransform.localRotation;
 
-        //Debug.LogError($"Positions got: x: {x}, y: {y}");
         double betAmount = BettingManager.instance.getCurrentBetAmount;
         float multiplier = cashoutpoint;
-        int winAmount = Convert.ToInt32(cashoutpoint * betAmount);
-        _photonView.RPC(nameof(ShowCashOutPointToOtherPlayersRPC), RpcTarget.All, position, size, scale, rotation, LocalSettings.userName, winAmount.ToString(), LocalSettings.emailID);
+        double winAmount = cashoutpoint * betAmount;
+
+        string trimmedValue = LocalSettings.TrimAfterDecimal(winAmount.ToString());
+
+        _photonView.RPC(nameof(ShowCashOutPointToOtherPlayersRPC), RpcTarget.All, position, size, scale, rotation, LocalSettings.userName, trimmedValue, LocalSettings.emailID);
     }
     [PunRPC]
     public void ShowCashOutPointToOtherPlayersRPC(Vector3 position, Vector2 size, Vector3 scale, Quaternion rotation, string userName, string winAmount, string emailID)

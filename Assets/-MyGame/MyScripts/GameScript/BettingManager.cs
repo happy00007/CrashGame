@@ -99,7 +99,7 @@ public class BettingManager : ES3Cloud
         _isPlayerPlacedBet = false;
 
         _currentBetAmount = amount;
-        betAmountTxt.text = _currentBetAmount.ToString();
+        betAmountTxt.text = LocalSettings.TrimAfterDecimal(_currentBetAmount.ToString());
         placeBetBtn.interactable = true;
 
     }
@@ -282,6 +282,7 @@ public class BettingManager : ES3Cloud
         Debug.LogError("Cashing out at multiplier: " + cashOutMultiplierSendToServer + "        BetAmount: " + _currentBetAmount);
         GameManager.instance.GetMyPlayer().ShowCashOutPointToOtherPlayers(cashOutMultiplierSendToServer);
         autoCashOutBtn.interactable = false;
+
         formData = new List<KeyValuePair<string, string>>();
         AddPOSTField(EMAIL, LocalSettings.emailID);
         AddPOSTField(BETAMOUNT, _currentBetAmount.ToString());

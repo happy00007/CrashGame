@@ -12,7 +12,7 @@ public static class LocalSettings
     public const string ROOM_STATE = "ROOMSTATE";
     public const float GAME_RESET_DELAY_TIME = 3f;
 
-    public const int GAME_DELAY_TIME_OVERRIDE = 7;
+    public const int GAME_DELAY_TIME_OVERRIDE = 10;
 
     public const float GRAPH_X_AXIS_LIMIT = 12f;
     public const float GRAPH_Y_AXIS_LIMIT = 3.8f;
@@ -90,5 +90,17 @@ public static class LocalSettings
     {
         get => PlayerPrefs.GetString(USERNAME);
         set => PlayerPrefs.SetString(USERNAME, value);
+    }
+
+    public static string TrimAfterDecimal(string value)
+    {
+        int decimalIndex = value.IndexOf('.');
+
+        if (decimalIndex < 0)
+        {
+            return value;
+        }
+
+        return value.Substring(0, decimalIndex);
     }
 }

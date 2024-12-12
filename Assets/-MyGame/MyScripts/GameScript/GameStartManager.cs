@@ -93,7 +93,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     public void GetRoundTimeDelayParseJson(string json, bool isSuccess)
     {
-        Debug.LogError($"Json Response: {json}     \nSuccess status: {isSuccess}");
+        //Debug.LogError($"Json Response: {json}     \nSuccess status: {isSuccess}");
         RoundDelayTimeCls roundDelayTimeCls = JsonConvert.DeserializeObject<RoundDelayTimeCls>(json);
         _gameStartWaitTime = int.Parse(roundDelayTimeCls.delay_time);
         if (_gameStartWaitTime == 1)

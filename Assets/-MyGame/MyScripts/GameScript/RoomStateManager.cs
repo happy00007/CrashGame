@@ -89,7 +89,7 @@ public class RoomStateManager : MonoBehaviourPunCallbacks
         GameManager.instance.ShowWaitingOrMultiPlierBoxInGame(false);
         BettingManager.instance.ActivateBettingSection(false);
         SendBetAmountAndCashOutPoint();
-        Debug.LogError("Game is started___________________________");
+        //Debug.LogError("Game is started___________________________");
         if (GameManager.instance.GetMyPlayer() != null)
             GameManager.instance.GetMyPlayer().UpdatePlayerStateOnNetwork(PLAYERSTATE.GameIsPlaying);
         else

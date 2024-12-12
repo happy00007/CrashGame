@@ -33,6 +33,6 @@ public class UIManager : MonoBehaviour
 
     public void UpdateWalletAmountTxt()
     {
-        _walletAmountTxt.text = LocalSettings.walletAmount.ToString();
+        _walletAmountTxt.text = LocalSettings.TrimAfterDecimal(LocalSettings.walletAmount.ToString());
     }
 }
