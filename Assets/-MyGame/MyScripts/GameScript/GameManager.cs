@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     }
     public void CreateThePlayer()
     {
+        Debug.LogError(" Player created");
         GameObject plyr = PhotonNetwork.Instantiate(_playerPrefab.name, Vector3.zero, Quaternion.identity);
         plyr.SetActive(true);
 
@@ -88,7 +89,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         Debug.Log($"Successfully joined room: {PhotonNetwork.CurrentRoom.Name}");
         Debug.Log("<color=green>Room Joined successfully</color>");
-        CreateThePlayer();
+        //CreateThePlayer();
     }
 
 
@@ -131,12 +132,12 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
-    private  void OnEnable()
+    private void OnEnable()
     {
         Application.focusChanged += OnFocusChanged;
     }
 
-    private  void OnDisable()
+    private void OnDisable()
     {
         Application.focusChanged -= OnFocusChanged;
     }

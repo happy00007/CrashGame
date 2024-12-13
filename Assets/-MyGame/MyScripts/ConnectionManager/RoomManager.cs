@@ -50,8 +50,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         ShowLoadingScreen(false);
         Debug.LogError("Now creating the room");
         PhotonNetwork.NickName = "User: " + Random.RandomRange(10, 100);
-        //JoinOrCreateRoom(); 
-        //GameStartManager.instance.ResetRemainingWaitTimeFromServer();
+
         PlayerLogin.instance.GetPlayerDataWithLogin();
     }
 

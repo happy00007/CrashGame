@@ -108,6 +108,7 @@ public class RoomStateManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        GameManager.instance.CreateThePlayer();
         if (!PhotonNetwork.IsMasterClient)
             SetRoomStateFromNetworkCustomProperty();
         else

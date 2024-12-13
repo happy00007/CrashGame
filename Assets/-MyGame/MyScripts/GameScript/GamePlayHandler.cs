@@ -273,7 +273,7 @@ public class GamePlayHandler : MonoBehaviour
             CrashPointGetCls crashPointGetCls = JsonConvert.DeserializeObject<CrashPointGetCls>(jsonResponse);
             _crashpointFromServer = crashPointGetCls.number;
             _finalCrashPoint = _crashpointFromServer;
-            Debug.LogError("Final  Crash point: ___________________________________ " + _finalCrashPoint);
+            //Debug.LogError("Final  Crash point: ___________________________________ " + _finalCrashPoint);
             _debugFinalPtTxt.text = _finalCrashPoint.ToString();
 
         }

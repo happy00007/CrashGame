@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerNameTxt: {fileID: 140913617390171573}
-  _playerState: {fileID: 0}
+  _playerState: {fileID: 8658278244341434307}
 --- !u!114 &1331609133399827737
 MonoBehaviour:
   m_ObjectHideFlags: 0
