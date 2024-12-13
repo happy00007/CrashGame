@@ -262,7 +262,8 @@ public class GamePlayHandler : MonoBehaviour
 
     public void GetCrashPointFromServer()
     {
-        GetJson.instance.GetJsonFromServer(APIStrings.getCrashPointAPIURL, GetCrashpointFromServer);
+        if (PhotonNetwork.IsMasterClient)
+            GetJson.instance.GetJsonFromServer(APIStrings.getCrashPointAPIURL, GetCrashpointFromServer);
     }
 
     void GetCrashpointFromServer(string jsonResponse, bool isSuccess)
@@ -271,7 +272,6 @@ public class GamePlayHandler : MonoBehaviour
         {
             CrashPointGetCls crashPointGetCls = JsonConvert.DeserializeObject<CrashPointGetCls>(jsonResponse);
             _crashpointFromServer = crashPointGetCls.number;
-            //_crashpointFromServer = 6;
             _finalCrashPoint = _crashpointFromServer;
             Debug.LogError("Final  Crash point: ___________________________________ " + _finalCrashPoint);
             _debugFinalPtTxt.text = _finalCrashPoint.ToString();

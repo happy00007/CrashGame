@@ -131,6 +131,25 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
+    private  void OnEnable()
+    {
+        Application.focusChanged += OnFocusChanged;
+    }
+
+    private  void OnDisable()
+    {
+        Application.focusChanged -= OnFocusChanged;
+    }
+    private void OnFocusChanged(bool hasFocus)
+    {
+        if (PhotonNetwork.IsMessageQueueRunning && PhotonNetwork.InRoom)
+        {
+            if (!hasFocus)
+            {
+                TransferMasterClient();
+            }
+        }
+    }
 
     #endregion
 }
