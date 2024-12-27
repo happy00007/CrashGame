@@ -40,11 +40,13 @@ public class LeaderBoardHandler : MonoBehaviour
 
 
     //public Texture2D[] rankImages;
-    public string[] imageURLs;
+    //public string[] imageURLs;
 
     [SerializeField] Text _totalPlayersInGameTxt;
-    [SerializeField] GameObject _twitterShareBox;
+    public GameObject _twitterShareBox;
     [SerializeField] Text _winDescriptionTxt;
+
+    [SerializeField] ShareOnTwitter _shareOnTwitter;
 
     #endregion
 
@@ -53,6 +55,7 @@ public class LeaderBoardHandler : MonoBehaviour
     {
         _twitterShareBox.SetActive(false);
         StartCoroutine(PlayerCountInGame());
+        _shareOnTwitter = GetComponent<ShareOnTwitter>();
     }
 
     #endregion
@@ -198,55 +201,55 @@ public class LeaderBoardHandler : MonoBehaviour
 
     public void OnTwitterShareBtnClick()
     {
-        ShareMessageOnX(_currentRank);
+        _shareOnTwitter.ShareMessageOnX(_currentRank);
         //ShareMessageOnX(2);
     }
 
-    //Texture2D _imageToShare;
-    string _imageUrl;
+    ////Texture2D _imageToShare;
+    //string _imageUrl;
 
-    void ShareMessageOnX(int currentPos)
-    {
-        string msg = "";
-        string url = "";
-        switch (currentPos)
-        {
-            case 1:
-                _imageUrl = imageURLs[0];
-                msg = $"🏆 Just topped the leaderboard with a 10x multiplier on #KryzelCrashGame at @Kryzel_io! 🚀 Am I the king of predictions or what? Try to beat my record and claim the throne! 👑 Play now: {url}";
-                break;
-            case 2:
-                _imageUrl = imageURLs[1];
-                msg = $"🥈 Finished second with a 9x multiplier on #KryzelCrashGame at @Kryzel_io! Close to first, but there's room to improve! 💪 Ready to take the top spot next time! Who's challenging me? 🚀 Play here: {url} #PredictAndWin #CryptoGaming";
-                break;
-            case 3:
-                _imageUrl = imageURLs[2];
-                msg = $"🥉 Secured third place with an 8x multiplier on #KryzelCrashGame at @Kryzel_io! Climbing up the ranks and aiming for the top! 🎯 Join me in the challenge and let's see who dominates next! 🚀 Play now: {url} #PredictAndWin #CryptoGaming";
-                break;
-            default:
-                msg = $"🚀 Just multiplied my wager by 5x on #KryzelCrashGame! 💸 Think you can do better? Check out @Kryzel_io for the ultimate prediction game experience. 🎮 Play and win big: {url} ";
-                break;
-        }
-        string message = msg;
+    //void ShareMessageOnX(int currentPos)
+    //{
+    //    string msg = "";
+    //    string url = "";
+    //    switch (currentPos)
+    //    {
+    //        case 1:
+    //            _imageUrl = imageURLs[0];
+    //            msg = $"🏆 Just topped the leaderboard with a 10x multiplier on #KryzelCrashGame at @Kryzel_io! 🚀 Am I the king of predictions or what? Try to beat my record and claim the throne! 👑 Play now: {url}";
+    //            break;
+    //        case 2:
+    //            _imageUrl = imageURLs[1];
+    //            msg = $"🥈 Finished second with a 9x multiplier on #KryzelCrashGame at @Kryzel_io! Close to first, but there's room to improve! 💪 Ready to take the top spot next time! Who's challenging me? 🚀 Play here: {url} #PredictAndWin #CryptoGaming";
+    //            break;
+    //        case 3:
+    //            _imageUrl = imageURLs[2];
+    //            msg = $"🥉 Secured third place with an 8x multiplier on #KryzelCrashGame at @Kryzel_io! Climbing up the ranks and aiming for the top! 🎯 Join me in the challenge and let's see who dominates next! 🚀 Play now: {url} #PredictAndWin #CryptoGaming";
+    //            break;
+    //        default:
+    //            msg = $"🚀 Just multiplied my wager by 5x on #KryzelCrashGame! 💸 Think you can do better? Check out @Kryzel_io for the ultimate prediction game experience. 🎮 Play and win big: {url} ";
+    //            break;
+    //    }
+    //    string message = msg;
 
 
-        //string filePath = Path.Combine(Application.temporaryCachePath, "sharedImage.png");
-        //File.WriteAllBytes(filePath, _imageToShare.EncodeToPNG());
+    //    //string filePath = Path.Combine(Application.temporaryCachePath, "sharedImage.png");
+    //    //File.WriteAllBytes(filePath, _imageToShare.EncodeToPNG());
 
-        string twitterUrl = "";
-        //if (currentPos < 4)
-        //{
-        //    twitterUrl = "https://x.com/intent/tweet?text=" + UnityWebRequest.EscapeURL(message) + "&url=" + UnityWebRequest.EscapeURL(_imageUrl);
-        //}
-        //else
-        {
-            twitterUrl = "https://twitter.com/intent/tweet?text=" +
-                              UnityWebRequest.EscapeURL(message);
-        }
-        Application.OpenURL(twitterUrl);
-        Debug.LogError("Twitter shared");
-        _twitterShareBox.SetActive(false);
-    }
+    //    string twitterUrl = "";
+    //    //if (currentPos < 4)
+    //    //{
+    //    //    twitterUrl = "https://x.com/intent/tweet?text=" + UnityWebRequest.EscapeURL(message) + "&url=" + UnityWebRequest.EscapeURL(_imageUrl);
+    //    //}
+    //    //else
+    //    {
+    //        twitterUrl = "https://twitter.com/intent/tweet?text=" +
+    //                          UnityWebRequest.EscapeURL(message);
+    //    }
+    //    Application.OpenURL(twitterUrl);
+    //    Debug.LogError("Twitter shared");
+    //    _twitterShareBox.SetActive(false);
+    //}
     #endregion
 }
 public class LeaderBoardDetailRootCls

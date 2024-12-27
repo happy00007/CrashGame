@@ -34,6 +34,7 @@ public class GamePlayHandler : MonoBehaviour
     [SerializeField] GameObject _rocketObj;
     [SerializeField] GameObject _rocketStartPos;
     [SerializeField] GameObject _rocketEndPos;
+    [SerializeField] GameObject _rocketEndMovePos;
     [SerializeField] Text _currentElapsedTimeTxt;
     [SerializeField] Text _currentMultiplierTxt;
     [SerializeField] GameObject _cashoutPlayerSign;
@@ -106,6 +107,7 @@ public class GamePlayHandler : MonoBehaviour
             _photonView.RPC(nameof(UpdateValuesToAllPlayersOnNetwork), RpcTarget.All, _currentGameTime, _currentGameTimeToShow, _currentMultiplierPoint, _isGameCrashed, _finalCrashPoint);
         }
     }
+    //void MoveRocketUpDown
 
     RectTransform _rocketRectTransform;
     float _rocketX, _rocketY;
@@ -133,9 +135,6 @@ public class GamePlayHandler : MonoBehaviour
         _rocketY = _currentMultiplierPoint * 60f;
 
         _rocketRectTransform = _rocketObj.GetComponent<RectTransform>();
-
-        if (_currentGameTimeToShow > LocalSettings.GRAPH_X_AXIS_LIMIT)
-            ScaleBuilder.instance.DrawLinePointsX(_currentGameTimeToShow);
 
         if (_currentMultiplierPoint > LocalSettings.GRAPH_Y_AXIS_LIMIT)
             ScaleBuilder.instance.DrawLinePointsY(_currentMultiplierPoint);
@@ -187,6 +186,10 @@ public class GamePlayHandler : MonoBehaviour
             _currentTween.Kill();
             Debug.Log("Rocket movement stopped!");
         }
+        if (_currentTweenUpDown != null && _currentTweenUpDown.IsActive())
+        {
+            _currentTweenUpDown.Kill();
+        }
         LeaderBoardHandler.instance.SortLeaderboard();
     }
     public bool IsGameCrashed()
@@ -196,6 +199,7 @@ public class GamePlayHandler : MonoBehaviour
 
     public void ResetValuesBeforeGameStart()
     {
+        _rocketEndMovePos.transform.position = _rocketEndPos.transform.position;
         _iWonGame = false;
         _isWaitingToStart = true;
         _crashpointFromServer = 0;
@@ -212,7 +216,7 @@ public class GamePlayHandler : MonoBehaviour
         _signsOfPlayers = DestroyAndClearList(_signsOfPlayers);
         _currentMultiplierTxt.text = "1.00x";
 
-        ScaleBuilder.instance.DrawLinePointsX(LocalSettings.GRAPH_X_AXIS_LIMIT);
+        //ScaleBuilder.instance.DrawLinePointsX(LocalSettings.GRAPH_X_AXIS_LIMIT);
         ScaleBuilder.instance.DrawLinePointsY(LocalSettings.GRAPH_Y_AXIS_LIMIT);
         //Debug.LogError("Game is resetting from game play handler");
     }
@@ -248,6 +252,31 @@ public class GamePlayHandler : MonoBehaviour
                                        .SetEase(exponentialCurve)
                                        .OnComplete(OnMovementComplete);
     }
+    private Tween _currentTweenUpDown;
+
+    void MoveRocketUp(bool isDown)
+    {
+        if (_currentTween != null)
+        {
+            _currentTween.Kill();
+            _currentTween = null;
+        }
+        if (isDown)
+        {
+            Debug.LogError("moving down");
+            _rocketObj.transform.position = _rocketEndPos.transform.position;
+            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndMovePos.transform.position, 1f)
+                                                        .SetEase(Ease.InSine)
+                                                        .OnComplete(() => MoveRocketUp(false));
+        }
+        else
+        {
+            Debug.LogError("moving up");
+            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndPos.transform.position, 3f)
+                                                        .SetEase(Ease.Linear)
+                                                        .OnComplete(() => MoveRocketUp(true));
+        }
+    }
 
     private Vector2 WorldToUIPosition(Vector3 worldPosition, RectTransform canvasRect)
     {
@@ -258,6 +287,7 @@ public class GamePlayHandler : MonoBehaviour
     private void OnMovementComplete()
     {
         Debug.Log("Rocket reached the target!");
+        MoveRocketUp(true);
     }
 
     public void GetCrashPointFromServer()
@@ -272,6 +302,7 @@ public class GamePlayHandler : MonoBehaviour
         {
             CrashPointGetCls crashPointGetCls = JsonConvert.DeserializeObject<CrashPointGetCls>(jsonResponse);
             _crashpointFromServer = crashPointGetCls.number;
+            _crashpointFromServer = 500;
             _finalCrashPoint = _crashpointFromServer;
             //Debug.LogError("Final  Crash point: ___________________________________ " + _finalCrashPoint);
             _debugFinalPtTxt.text = _finalCrashPoint.ToString();

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
-
+    public TMP_Text debuggerTxt;
     [SerializeField] GameObject _loadingPanel;
 
     [SerializeField] GameObject _messagePanelPrefab;
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public static bool isPlayerLogedIn;
     void Start()
     {
-
+        debuggerTxt.text = Application.absoluteURL;
     }
 
     public void AddPlayerToList(GameObject player)

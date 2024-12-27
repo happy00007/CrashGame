@@ -35,7 +35,7 @@ public class GameResetManager : MonoBehaviour
     public void GetValuesOnGameCrash()
     {
         BettingManager.instance.DisableCashOutbtn(false);
-        PlayerLogin.instance.GetPlayerDataWithLogin();
+        PlayerLogin.instance.GetPlayerDataWithLogin(LocalSettings.emailID, LocalSettings.userName, LocalSettings.walletID);
         GameStartManager.instance.GetDelayTimeBetweenRounds();
     }
 }

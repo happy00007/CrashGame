@@ -89,6 +89,7 @@ namespace DA_Assets.Shared
         {
             Validate();
             Refresh();
+            Invoke(nameof(Refresh), 0.5f);
         }
 
         private void OnRectTransformDimensionsChange()

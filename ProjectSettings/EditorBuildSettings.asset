@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/-MyGame/MyScenes/MainMenuGameScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: a54cbefd936aef745a8b9159c1bb0bac,
+    com.unity.addressableassets: {fileID: 11400000, guid: 13f1161304bf88d40942cb481e3a3f6f,
       type: 2}
   m_UseUCBPForAssetBundles: 0

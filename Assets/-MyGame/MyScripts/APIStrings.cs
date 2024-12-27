@@ -11,6 +11,7 @@ public static class APIStrings
     public static string sendBetToServerAPIURL => prefixURL + "betting/v1/place-bet";
     public static string cashoutOnBtnAPIURL => prefixURL + "betting/v1/manual-crash";
     public static string getLeaderBoardAPIURL => prefixURL + "ranked-players/v1/all";
+    public static string getTwitterMessagesAPIURL => prefixURL + "ranked-tweets/v1/get-tweets";
 
     #endregion
 }

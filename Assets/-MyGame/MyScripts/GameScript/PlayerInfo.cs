@@ -17,11 +17,12 @@ public class PlayerInfo : MonoBehaviourPunCallbacks
     {
         //GameManager.instance.SetPlayerPos(gameObject);
         _photonView = GetComponent<PhotonView>();
+        if (_photonView.IsMine)
+            GameManager.instance.SetMyPlayer(GetComponent<PlayerInfo>());
         _playerState = GetComponent<PlayerState>();
         _playerNameTxt.text = _photonView.Controller.NickName;
         GameManager.instance.AddPlayerToList(gameObject);
 
-        GameManager.instance.SetMyPlayer(this);
         if (_photonView.IsMine && !PhotonNetwork.IsMasterClient)
         {
             if (LocalSettings.GetCurrentRoom.GetRoomStateProperty(LocalSettings.ROOM_STATE) == ROOMSTATE.GameIsPlaying)

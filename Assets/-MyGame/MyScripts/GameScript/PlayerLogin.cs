@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerLogin : ES3Cloud
 {
     #region Creating Instance
+
     public PlayerLogin(string url, string apiKey) : base(url, apiKey)
     {
     }
@@ -28,29 +29,33 @@ public class PlayerLogin : ES3Cloud
     }
     #endregion
 
+
     const string USERNAME = "username";
     const string EMAIL = "email";
     const string WALLETNUMBER = "wallet_number";
-    public void GetPlayerDataWithLogin()
+    public void GetPlayerDataWithLogin(string emailAddress, string userName, string walledID)
     {
         formData = new List<KeyValuePair<string, string>>();
+        //LocalSettings.emailID = GenerateRandomEmail();
+        //LocalSettings.userName = GenerateRandomName();
+        //LocalSettings.walletID = UnityEngine.Random.Range(10000000, 100000000).ToString();
+        LocalSettings.userName = userName;
+        LocalSettings.emailID = emailAddress;
+        LocalSettings.walletID = walledID;
 
-        if (LocalSettings.emailID == "")
-        {
-            LocalSettings.emailID = GenerateRandomEmail();
-            LocalSettings.userName = GenerateRandomName();
-            LocalSettings.walletID = UnityEngine.Random.Range(10000000, 100000000).ToString();
-        }
-        string playerName = LocalSettings.userName;
-        string email = LocalSettings.emailID;
-        string walletNumber = LocalSettings.walletID;
+        //LocalSettings.userName = "SandeepJaiswal";
+        //LocalSettings.emailID = "sandeepsj26899@gmail.com";
+        //LocalSettings.walletID = "0x53ca3c984da3a5b57c9e63eb914f3d0325eccd36ab9ed2e2fb9f08fdf36bef5e";
 
-        AddPOSTField(USERNAME, playerName);
-        AddPOSTField(EMAIL, email);
-        AddPOSTField(WALLETNUMBER, walletNumber);
+
+
+        //Debug.LogError($" _____ Username :     {LocalSettings.userName}    Email:    {LocalSettings.emailID}     WalletID: {LocalSettings.walletID}");
+
+
+        AddPOSTField(USERNAME, LocalSettings.userName);
+        AddPOSTField(EMAIL, LocalSettings.emailID);
+        AddPOSTField(WALLETNUMBER, LocalSettings.walletID);
         GetJson.instance.PostDataAndGetResponseFromServer(APIStrings.getPlayerDetailAPIURL, formData, PlayerLoginDetailParseJson);
-
-        Debug.LogError("Username :   " + LocalSettings.userName + "      Email:   " + LocalSettings.emailID);
     }
 
 
@@ -58,7 +63,6 @@ public class PlayerLogin : ES3Cloud
     {
         if (!isSuccess)
             return;
-
         PlayerLoginRootCls playerLoginRootCls = JsonConvert.DeserializeObject<PlayerLoginRootCls>(json);
         LocalSettings.userName = playerLoginRootCls.data.username;
         LocalSettings.emailID = playerLoginRootCls.data.email;
@@ -80,6 +84,8 @@ public class PlayerLogin : ES3Cloud
             // If blocked then functionality here
             GameManager.isPlayerLogedIn = false;
         }
+
+        //Debug.LogError($"Name: {playerLoginRootCls.data.username}    Email: {playerLoginRootCls.data.email}     WalletID: {playerLoginRootCls.data.wallet_number}");
     }
 
     #region Generate random name
