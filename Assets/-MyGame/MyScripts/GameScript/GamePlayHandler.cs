@@ -33,12 +33,14 @@ public class GamePlayHandler : MonoBehaviour
 
     [SerializeField] GameObject _rocketObj;
     [SerializeField] GameObject _rocketStartPos;
+    [SerializeField] GameObject _cashOutSignPos;
     [SerializeField] GameObject _rocketEndPos;
     [SerializeField] GameObject _rocketEndMovePos;
     [SerializeField] Text _currentElapsedTimeTxt;
     [SerializeField] Text _currentMultiplierTxt;
     [SerializeField] GameObject _cashoutPlayerSign;
     [SerializeField] AnimationCurve _exponentialCurve;
+    [SerializeField] GameObject _curveObject;
 
     [SerializeField] bool _iWonGame;
 
@@ -173,6 +175,7 @@ public class GamePlayHandler : MonoBehaviour
 
         startGameExecutionAction = null;
         _rocketObj.SetActive(false);
+        _curveObject.SetActive(false);
 
         _currentGameRestDelayTime = LocalSettings.GAME_RESET_DELAY_TIME;
         GameResetManager.instance.GetValuesOnGameCrash();
@@ -199,7 +202,7 @@ public class GamePlayHandler : MonoBehaviour
 
     public void ResetValuesBeforeGameStart()
     {
-        _rocketEndMovePos.transform.position = _rocketEndPos.transform.position;
+        //_rocketEndMovePos.transform.position = _rocketEndPos.transform.position;
         _iWonGame = false;
         _isWaitingToStart = true;
         _crashpointFromServer = 0;
@@ -213,6 +216,7 @@ public class GamePlayHandler : MonoBehaviour
         _rocketObj.transform.position = _rocketStartPos.transform.position;
         LocalSettings.SetPosAndRect(_rocketObj, _rocketStartPos.GetComponent<RectTransform>(), _rocketStartPos.transform.parent);
         _rocketObj.SetActive(true);
+        _curveObject.SetActive(true);
         _signsOfPlayers = DestroyAndClearList(_signsOfPlayers);
         _currentMultiplierTxt.text = "1.00x";
 
@@ -226,7 +230,8 @@ public class GamePlayHandler : MonoBehaviour
     {
         GameObject obj = Instantiate(_cashoutPlayerSign);
         obj.SetActive(true);
-        LocalSettings.SetPosAndRect(obj, _rocketStartPos.GetComponent<RectTransform>(), _rocketStartPos.transform.parent);
+        //LocalSettings.SetPosAndRect(obj, _rocketStartPos.GetComponent<RectTransform>(), _rocketStartPos.transform.parent);
+        LocalSettings.SetPosAndRect(obj, _cashOutSignPos.GetComponent<RectTransform>(), _cashOutSignPos.transform.parent);
         _signsOfPlayers.Add(obj);
         return obj;
     }
@@ -263,16 +268,14 @@ public class GamePlayHandler : MonoBehaviour
         }
         if (isDown)
         {
-            Debug.LogError("moving down");
             _rocketObj.transform.position = _rocketEndPos.transform.position;
-            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndMovePos.transform.position, 1f)
+            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndMovePos.transform.position, 0.4f)
                                                         .SetEase(Ease.InSine)
                                                         .OnComplete(() => MoveRocketUp(false));
         }
         else
         {
-            Debug.LogError("moving up");
-            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndPos.transform.position, 3f)
+            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndPos.transform.position, 4f)
                                                         .SetEase(Ease.Linear)
                                                         .OnComplete(() => MoveRocketUp(true));
         }
@@ -302,7 +305,7 @@ public class GamePlayHandler : MonoBehaviour
         {
             CrashPointGetCls crashPointGetCls = JsonConvert.DeserializeObject<CrashPointGetCls>(jsonResponse);
             _crashpointFromServer = crashPointGetCls.number;
-            _crashpointFromServer = 500;
+            _crashpointFromServer = UnityEngine.Random.Range(4, 7);
             _finalCrashPoint = _crashpointFromServer;
             //Debug.LogError("Final  Crash point: ___________________________________ " + _finalCrashPoint);
             _debugFinalPtTxt.text = _finalCrashPoint.ToString();

@@ -3,16 +3,15 @@ using UnityEngine;
 public class ParabolicPath : MonoBehaviour
 {
     public LineRenderer lineRenderer;
-    public Transform rocket;  // Reference to the rocket
-    public int pointsCount = 50;  // Number of points to draw the line
-    public float maxHeight = 5f;  // Maximum height of the parabola
-    public float maxDistance = 10f;  // Maximum horizontal distance (X axis) of the parabolic path
+    public Transform rocket;
+    public int pointsCount = 50;
+    public float maxHeight = 5f;
+    public float maxDistance = 10f;
 
     private Vector3 initialPosition;
     public Transform initialPos;
     private void Start()
     {
-        // Store the initial position where the rocket starts
         initialPosition = initialPos.position;
 
         if (lineRenderer == null)
@@ -27,21 +26,18 @@ public class ParabolicPath : MonoBehaviour
     {
         if (Vector2.Distance(initialPosition, rocket.transform.position) < 1)
             return;
-        // Calculate the distance traveled by the rocket along the X-axis
+
         float rocketDistance = rocket.position.x - initialPosition.x;
 
-        // Number of points based on the rocket's distance (more points as it moves)
+
         int pointsToDraw = Mathf.FloorToInt((rocketDistance / maxDistance) * pointsCount);
 
-        // Ensure pointsToDraw doesn't exceed the total number of points
         pointsToDraw = Mathf.Min(pointsToDraw, pointsCount);
 
         Vector3[] positions = new Vector3[pointsToDraw];
 
-        // If the rocket is still near its initial height, use a straight line
         if (rocket.position.y <= initialPosition.y)
         {
-            // For a straight line, we can simply interpolate from the initial position to the rocket's position
             for (int i = 0; i < pointsToDraw; i++)
             {
                 float t = (float)i / (pointsToDraw - 1);
