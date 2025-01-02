@@ -259,6 +259,7 @@ public class BettingManager : ES3Cloud
         if (!GameManager.isPlayerLogedIn)
         {
             Debug.LogError("First login before placing bet");
+            GameManager.instance.ShowMessage("Your session has timed out. Please close the page and reopen the game to continue.");
             return;
         }
         if (_currentBetAmount <= 0)

@@ -230,7 +230,6 @@ public class GamePlayHandler : MonoBehaviour
     {
         GameObject obj = Instantiate(_cashoutPlayerSign);
         obj.SetActive(true);
-        //LocalSettings.SetPosAndRect(obj, _rocketStartPos.GetComponent<RectTransform>(), _rocketStartPos.transform.parent);
         LocalSettings.SetPosAndRect(obj, _cashOutSignPos.GetComponent<RectTransform>(), _cashOutSignPos.transform.parent);
         _signsOfPlayers.Add(obj);
         return obj;
@@ -305,9 +304,8 @@ public class GamePlayHandler : MonoBehaviour
         {
             CrashPointGetCls crashPointGetCls = JsonConvert.DeserializeObject<CrashPointGetCls>(jsonResponse);
             _crashpointFromServer = crashPointGetCls.number;
-            _crashpointFromServer = UnityEngine.Random.Range(4, 7);
+            //_crashpointFromServer = UnityEngine.Random.Range(4, 7);
             _finalCrashPoint = _crashpointFromServer;
-            //Debug.LogError("Final  Crash point: ___________________________________ " + _finalCrashPoint);
             _debugFinalPtTxt.text = _finalCrashPoint.ToString();
 
         }

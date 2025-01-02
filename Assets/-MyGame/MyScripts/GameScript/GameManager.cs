@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     }
     public void CreateThePlayer()
     {
-        Debug.LogError(" Player created");
+        //Debug.LogError(" Player created");
         GameObject plyr = PhotonNetwork.Instantiate(_playerPrefab.name, Vector3.zero, Quaternion.identity);
         plyr.SetActive(true);
 

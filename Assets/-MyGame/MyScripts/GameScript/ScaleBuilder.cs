@@ -53,12 +53,12 @@ public class ScaleBuilder : MonoBehaviour
 
     void CreateTextObjects()
     {
-        for (int i = 0; i < segmentsX + 3; i++)
-        {
-            GameObject obj = Instantiate(labelPrefabTxt.gameObject);
-            obj.SetActive(true);
-            allLaBelsX.Add(obj.GetComponent<TMP_Text>());
-        }
+        //for (int i = 0; i < segmentsX + 3; i++)
+        //{
+        //    GameObject obj = Instantiate(labelPrefabTxt.gameObject);
+        //    obj.SetActive(true);
+        //    allLaBelsX.Add(obj.GetComponent<TMP_Text>());
+        //}
         for (int i = 0; i < segmentsY + 2; i++)
         {
             GameObject obj = Instantiate(labelPrefabTxt.gameObject);
