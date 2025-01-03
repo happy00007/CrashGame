@@ -14,20 +14,19 @@
             height: 100%;
             width: 100%;
             background-color: #2E2C2F; /* Background color */
-            display: flex;
-            justify-content: center;
-            align-items: center;
             overflow: hidden; /* Prevent scrollbars */
         }
 
         #unity-container {
+            position: absolute;
+            top: 1%; /* 1% space from the top */
+            left: 0;
+            width: 100%;
+            height: 99%; /* Remaining 99% of the screen */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
-            width: 100%;
-            height: 100%;
         }
 
         #unity-canvas {
@@ -61,23 +60,6 @@
             transition: width 0.3s ease;
         }
 
-        /* Fullscreen button styles */
-        #fullscreen-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 10px 15px;
-            background-color: #6948B9;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-            #fullscreen-button:hover {
-                background-color: #5A3DA9;
-            }
-
         /* Footer */
         #unity-footer {
             margin-top: 10px;
@@ -94,7 +76,6 @@
                 <div id="unity-progress-bar-full"></div>
             </div>
         </div>
-        <button id="fullscreen-button">Go Fullscreen</button>
         <div id="unity-warning"></div>
         <div id="unity-footer">
             <div id="unity-logo-title-footer"></div>
@@ -103,18 +84,8 @@
     </div>
     <script>
         const canvas = document.querySelector("#unity-canvas");
-        const fullscreenButton = document.querySelector("#fullscreen-button");
         const unityLoadingBar = document.querySelector("#unity-loading-bar");
         const unityProgressBarFull = document.querySelector("#unity-progress-bar-full");
-
-        // Make the canvas fill the entire screen (without fullscreen mode)
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();  // Ensure canvas fills screen on load
 
         function unityShowBanner(msg, type) {
             const warningBanner = document.querySelector("#unity-warning");
@@ -167,22 +138,6 @@
                 unityProgressBarFull.style.width = 100 * progress + "%";
             }).then((unityInstance) => {
                 unityLoadingBar.style.display = "none";
-
-                // Show fullscreen button when not in fullscreen
-                function updateFullscreenButton() {
-                    if (document.fullscreenElement) {
-                        fullscreenButton.style.display = "none";
-                    } else {
-                        fullscreenButton.style.display = "block";
-                    }
-                }
-
-                fullscreenButton.addEventListener("click", () => {
-                    unityInstance.SetFullscreen(1);
-                });
-
-                document.addEventListener("fullscreenchange", updateFullscreenButton);
-                updateFullscreenButton(); // Initialize button state
             }).catch((message) => {
                 alert(message);
             });

@@ -9,7 +9,7 @@ public class OrientationHandler : MonoBehaviour
     bool _isLand;
     void Start()
     {
-        Screen.fullScreen = true;
+        //Screen.fullScreen = true;
         bool isLandscape = Screen.width > Screen.height;
         _isLand = isLandscape;
         SetOrientation(_isLand);
