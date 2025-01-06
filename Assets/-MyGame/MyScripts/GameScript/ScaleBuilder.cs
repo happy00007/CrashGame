@@ -117,7 +117,7 @@ public class ScaleBuilder : MonoBehaviour
             valFactor += (1 - ((float)i / (float)segmentsY));
             string val = $"{valFactor:F1}x";
             allLaBelsY[i].text = val;
-            Debug.LogError("Label val: " + val + "         " + ((float)i / (float)segmentsY));
+            //Debug.LogError("Label val: " + val + "         " + ((float)i / (float)segmentsY));
             Vector3 posLine = new Vector3(initialPtY.position.x, initialPtY.position.y + (distanceFactor / 2) + (i * (distanceFactor)), initialPtY.position.z);
             LocalSettings.SetPosAndRect(lineImages[i], _smallScaleLine.GetComponent<RectTransform>(), _smallScaleLine.transform.parent);
             lineImages[i].transform.position = posLine;
