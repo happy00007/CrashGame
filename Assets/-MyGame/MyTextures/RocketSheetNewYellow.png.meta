@@ -348,7 +348,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RocketSheetNewYellow_0: 97282588666999614
+      RocketSheetNewYellow_1: -2076964629107534102
+      RocketSheetNewYellow_2: -5747772441858521570
+      RocketSheetNewYellow_3: 8146069379683364677
+      RocketSheetNewYellow_4: 392364026416532390
+      RocketSheetNewYellow_5: 7017131830927772271
+      RocketSheetNewYellow_6: -8143308792558830611
+      RocketSheetNewYellow_7: 1854615240010711971
+      RocketSheetNewYellow_8: 743429204863387385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

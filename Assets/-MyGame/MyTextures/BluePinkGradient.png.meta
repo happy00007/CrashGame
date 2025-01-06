@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BluePinkGradient_0: 8023791325830183160
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

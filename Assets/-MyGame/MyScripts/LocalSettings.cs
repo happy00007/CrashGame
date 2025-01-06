@@ -15,7 +15,7 @@ public static class LocalSettings
     public const int GAME_DELAY_TIME_OVERRIDE = 0;
 
     public const float GRAPH_X_AXIS_LIMIT = 12f;
-    public const float GRAPH_Y_AXIS_LIMIT = 3.8f;
+    public const float GRAPH_Y_AXIS_LIMIT = 4.8f;
 
 
 

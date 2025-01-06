@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2368b6e9d88b1564b8bf01632dc1ceee
+guid: 32fe7a12361639346a01d0b39ac4433b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 466978039454415299
-    second: 2941a14978734a4da0fe10334eae492ceDX4yeE0tdq3bBVD-7_0
+      213: 5677011741754556410
+    second: LeaderboardBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,22 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2941a14978734a4da0fe10334eae492ceDX4yeE0tdq3bBVD-7_0
+      name: LeaderboardBG_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
-        width: 348
-        height: 468
+        y: 0
+        width: 2312
+        height: 2078
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 73, y: 61, z: 64, w: 66}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c9b69f7d0a0b7600800000000000000
-      internalID: 466978039454415299
+      spriteID: aff700dd91cc8ce40800000000000000
+      internalID: 5677011741754556410
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: dea83adbd9f55184eaa58ebcc309cc85
     internalID: 0
     vertices: []
     indices: 
@@ -157,7 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      2941a14978734a4da0fe10334eae492ceDX4yeE0tdq3bBVD-7_0: 466978039454415299
+      LeaderboardBG_0: 5677011741754556410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

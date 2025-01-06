@@ -37,9 +37,10 @@ public class ScaleBuilder : MonoBehaviour
 
     [Header("Values for Y axis")]
     //public float finalValY = 11;
-    public int segmentsY = 7;
+    public int segmentsY = 5;
     public Transform initialPtY;
     public Transform finalPtY;
+    public Transform finalPtYOrg;
     public List<TMP_Text> allLaBelsY;
 
     public List<GameObject> lineImages;
@@ -59,7 +60,7 @@ public class ScaleBuilder : MonoBehaviour
         //    obj.SetActive(true);
         //    allLaBelsX.Add(obj.GetComponent<TMP_Text>());
         //}
-        for (int i = 0; i < segmentsY + 2; i++)
+        for (int i = 0; i < segmentsY + 5; i++)
         {
             GameObject obj = Instantiate(labelPrefabTxt.gameObject);
             obj.SetActive(true);
@@ -102,7 +103,6 @@ public class ScaleBuilder : MonoBehaviour
 
         if (finalValY <= 0)
             finalValY = LocalSettings.GRAPH_Y_AXIS_LIMIT;
-        //finalValY = 3.8f;
         float distance = Vector3.Distance(initialPtY.position, finalPtY.position);
         float distanceFactor = distance / segmentsY;
 
@@ -114,13 +114,21 @@ public class ScaleBuilder : MonoBehaviour
 
             float valFactor = finalValY / segmentsY;
             valFactor *= i;
-            valFactor += 1;
-            //allLaBelsY[i].text = i == 0 ? "" : $"{valFactor:F1}x";
-            allLaBelsY[i].text = $"{valFactor:F1}x";
-
+            valFactor += (1 - ((float)i / (float)segmentsY));
+            string val = $"{valFactor:F1}x";
+            allLaBelsY[i].text = val;
+            Debug.LogError("Label val: " + val + "         " + ((float)i / (float)segmentsY));
             Vector3 posLine = new Vector3(initialPtY.position.x, initialPtY.position.y + (distanceFactor / 2) + (i * (distanceFactor)), initialPtY.position.z);
             LocalSettings.SetPosAndRect(lineImages[i], _smallScaleLine.GetComponent<RectTransform>(), _smallScaleLine.transform.parent);
             lineImages[i].transform.position = posLine;
         }
+    }
+    public void SetYOfFinalPt(float y)
+    {
+        finalPtY.transform.position = new Vector3(finalPtYOrg.transform.position.x, y, finalPtYOrg.transform.position.z);
+    }
+    public void ResetPoint()
+    {
+        finalPtY.transform.position = finalPtYOrg.transform.position;
     }
 }

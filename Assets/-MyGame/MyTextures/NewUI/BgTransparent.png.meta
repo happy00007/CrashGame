@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3348fcaea6179c343aac06b4f6401b09
+guid: 690e7b5541e076c44a2d8200f3d01017
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1839377291145181718
-    second: Asteroid_0
+      213: 1488361769041601609
+    second: BgTransparent_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,22 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asteroid_0
+      name: BgTransparent_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 206
-        height: 200
+        y: 171
+        width: 3024
+        height: 1523
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae50f5169183976e0800000000000000
-      internalID: -1839377291145181718
+      spriteID: 9442ffca429b7a410800000000000000
+      internalID: 1488361769041601609
       vertices: []
       indices: 
       edges: []
@@ -149,14 +149,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7c062b1bdad078c4a8bc0a04127ec828
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BgTransparent_0: 1488361769041601609
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

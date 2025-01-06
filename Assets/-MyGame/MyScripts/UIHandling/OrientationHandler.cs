@@ -23,7 +23,7 @@ public class OrientationHandler : MonoBehaviour
             RectTransform posObj = isLandscape ? orientationObjets[i].landscapePos : orientationObjets[i].portraitPos;
             LocalSettings.SetPosAndRect(orientationObjets[i].originalObj, posObj, posObj.transform.parent);
         }
-        _rocketAnimatorForScale.transform.localScale = isLandscape ? Vector3.one * 50 : Vector3.one * 70;
+        _rocketAnimatorForScale.transform.localScale = isLandscape ? Vector3.one * 40 : Vector3.one * 70;
     }
 
 

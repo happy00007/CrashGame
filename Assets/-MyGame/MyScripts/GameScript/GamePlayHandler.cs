@@ -43,6 +43,7 @@ public class GamePlayHandler : MonoBehaviour
     [SerializeField] GameObject _curveObject;
 
     [SerializeField] bool _iWonGame;
+    [SerializeField] bool _isMovingUpDown;
 
     public Action startGameExecutionAction;
     //[ShowOnly]
@@ -144,13 +145,16 @@ public class GamePlayHandler : MonoBehaviour
 
         if (_isWaitingToStart)
         {
-            MoveRocketToTarget(_rocketObj, _rocketStartPos, _rocketEndPos, 12, _exponentialCurve);
+            MoveRocketToTarget(_rocketObj, _rocketStartPos, _rocketEndPos, 17);
             _isWaitingToStart = false;
+
         }
         if (isGameCrashed)
         {
             GameCrash();
         }
+        if (_isMovingUpDown)
+            ScaleBuilder.instance.SetYOfFinalPt(_rocketObj.transform.position.y);
     }
     [PunRPC]
     public void GameResetDelayTimeRPC(float delayTime)
@@ -203,6 +207,7 @@ public class GamePlayHandler : MonoBehaviour
     public void ResetValuesBeforeGameStart()
     {
         //_rocketEndMovePos.transform.position = _rocketEndPos.transform.position;
+        ScaleBuilder.instance.ResetPoint();
         _iWonGame = false;
         _isWaitingToStart = true;
         _crashpointFromServer = 0;
@@ -210,6 +215,7 @@ public class GamePlayHandler : MonoBehaviour
         _currentGameTime = 0;
         _currentGameTimeToShow = 0;
         _finalCrashPoint = 0;
+        _isMovingUpDown = false;
         _debugFinalPtTxt.text = _finalCrashPoint.ToString();
 
         _isGameCrashed = false;
@@ -249,15 +255,14 @@ public class GamePlayHandler : MonoBehaviour
         return list;
     }
 
-    public void MoveRocketToTarget(GameObject rocket, GameObject startPoint, GameObject endPoint, float duration, AnimationCurve exponentialCurve)
+    public void MoveRocketToTarget(GameObject rocket, GameObject startPoint, GameObject endPoint, float duration)
     {
         rocket.transform.position = startPoint.transform.position;
         _currentTween = rocket.transform.DOMove(endPoint.transform.position, duration)
-                                       .SetEase(exponentialCurve)
+                                       .SetEase(Ease.Linear)
                                        .OnComplete(OnMovementComplete);
     }
     private Tween _currentTweenUpDown;
-
     void MoveRocketUp(bool isDown)
     {
         if (_currentTween != null)
@@ -268,13 +273,13 @@ public class GamePlayHandler : MonoBehaviour
         if (isDown)
         {
             _rocketObj.transform.position = _rocketEndPos.transform.position;
-            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndMovePos.transform.position, 0.4f)
+            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndMovePos.transform.position, 4f)
                                                         .SetEase(Ease.InSine)
                                                         .OnComplete(() => MoveRocketUp(false));
         }
         else
         {
-            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndPos.transform.position, 4f)
+            _currentTweenUpDown = _rocketObj.transform.DOMove(_rocketEndPos.transform.position, 6f)
                                                         .SetEase(Ease.Linear)
                                                         .OnComplete(() => MoveRocketUp(true));
         }
@@ -290,6 +295,7 @@ public class GamePlayHandler : MonoBehaviour
     {
         Debug.Log("Rocket reached the target!");
         MoveRocketUp(true);
+        _isMovingUpDown = true;
     }
 
     public void GetCrashPointFromServer()
@@ -304,7 +310,7 @@ public class GamePlayHandler : MonoBehaviour
         {
             CrashPointGetCls crashPointGetCls = JsonConvert.DeserializeObject<CrashPointGetCls>(jsonResponse);
             _crashpointFromServer = crashPointGetCls.number;
-            //_crashpointFromServer = UnityEngine.Random.Range(4, 7);
+            //_crashpointFromServer = UnityEngine.Random.Range(18, 20);
             _finalCrashPoint = _crashpointFromServer;
             _debugFinalPtTxt.text = _finalCrashPoint.ToString();
 
