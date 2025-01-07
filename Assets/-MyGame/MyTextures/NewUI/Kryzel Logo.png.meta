@@ -1,0 +1,565 @@
+fileFormatVersion: 2
+guid: 1d7c557dba2b6674089620968b51997c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1889549834161807100
+    second: Kryzel Logo_0
+  - first:
+      213: -1438771495466959614
+    second: Kryzel Logo_1
+  - first:
+      213: 4085544090285237192
+    second: Kryzel Logo_2
+  - first:
+      213: 4224245484448275801
+    second: Kryzel Logo_3
+  - first:
+      213: -348989829099989904
+    second: Kryzel Logo_4
+  - first:
+      213: -50205674475322470
+    second: Kryzel Logo_5
+  - first:
+      213: -504942036530483594
+    second: Kryzel Logo_6
+  - first:
+      213: -2112183440469003683
+    second: Kryzel Logo_7
+  - first:
+      213: 8934099163952132908
+    second: Kryzel Logo_8
+  - first:
+      213: -5133253941672167968
+    second: Kryzel Logo_9
+  - first:
+      213: -2018536906093745310
+    second: Kryzel Logo_10
+  - first:
+      213: -641909810398028934
+    second: Kryzel Logo_11
+  - first:
+      213: -3761898249993440667
+    second: Kryzel Logo_12
+  - first:
+      213: 9214979333622774169
+    second: Kryzel Logo_13
+  - first:
+      213: 4701878583702946064
+    second: Kryzel Logo_14
+  - first:
+      213: 1621958588614872081
+    second: Kryzel Logo_15
+  - first:
+      213: -4148633583802174502
+    second: Kryzel Logo_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kryzel Logo_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 116
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4012365ef68f6c5e0800000000000000
+      internalID: -1889549834161807100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 61
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20dfbb3a2f4780ce0800000000000000
+      internalID: -1438771495466959614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 99
+        width: 63
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3e5a734b4c2b830800000000000000
+      internalID: 4085544090285237192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 92
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d569813e88f9a30800000000000000
+      internalID: 4224245484448275801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_4
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 44
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07455467993282bf0800000000000000
+      internalID: -348989829099989904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_5
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 44
+        width: 16
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93803f7432ad4ff0800000000000000
+      internalID: -50205674475322470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 57
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e2070a4e51ef8f0800000000000000
+      internalID: -504942036530483594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 31
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52f16a0a5400b2e0800000000000000
+      internalID: -2112183440469003683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_8
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 34
+        width: 38
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c233b7fcadb4cfb70800000000000000
+      internalID: 8934099163952132908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_9
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 82
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5b1c8bcb403c8b0800000000000000
+      internalID: -5133253941672167968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_10
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 44
+        width: 55
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b244ae067bcf3e0800000000000000
+      internalID: -2018536906093745310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_11
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 24
+        width: 72
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b136dad6a7717f0800000000000000
+      internalID: -641909810398028934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_12
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 44
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5623af7197d0bcbc0800000000000000
+      internalID: -3761898249993440667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_13
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 43
+        width: 65
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 999b62181ee22ef70800000000000000
+      internalID: 9214979333622774169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 52
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01181a609ad604140800000000000000
+      internalID: 4701878583702946064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 5
+        width: 95
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c88ca2eba528610800000000000000
+      internalID: 1621958588614872081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kryzel Logo_16
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 19
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad337366cb71d66c0800000000000000
+      internalID: -4148633583802174502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Kryzel Logo_0: -1889549834161807100
+      Kryzel Logo_1: -1438771495466959614
+      Kryzel Logo_10: -2018536906093745310
+      Kryzel Logo_11: -641909810398028934
+      Kryzel Logo_12: -3761898249993440667
+      Kryzel Logo_13: 9214979333622774169
+      Kryzel Logo_14: 4701878583702946064
+      Kryzel Logo_15: 1621958588614872081
+      Kryzel Logo_16: -4148633583802174502
+      Kryzel Logo_2: 4085544090285237192
+      Kryzel Logo_3: 4224245484448275801
+      Kryzel Logo_4: -348989829099989904
+      Kryzel Logo_5: -50205674475322470
+      Kryzel Logo_6: -504942036530483594
+      Kryzel Logo_7: -2112183440469003683
+      Kryzel Logo_8: 8934099163952132908
+      Kryzel Logo_9: -5133253941672167968
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
